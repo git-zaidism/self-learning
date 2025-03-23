@@ -67,7 +67,11 @@ In simple terms, Kubernetes makes it easier to run and manage apps at scale, ens
   - **API Server**: Acts as the main entry point to interact with the Kubernetes cluster. It handles all requests and updates to the cluster.
   - **Scheduler**: Decides where to place containers (called pods) based on resources and other factors.
   - **Controller Manager**: Ensures that the cluster’s desired state is maintained (e.g., ensuring a certain number of pods are running).
+  - **etcd**: Ensures that the cluster’s desired state is maintained (e.g., ensuring a certain number of pods are running).
 
-## etcd:
-- A key-value store that holds the configuration data and the cluster’s state.
+## K8s Clusture Represntaion: 
+- https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
+- https://kubernetes.io/docs/concepts/architecture/
+
+- https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
 
