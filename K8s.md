@@ -83,6 +83,36 @@ In simple terms, Kubernetes makes it easier to run and manage apps at scale, ens
     cluster information at any given point of time
 
 
+# Worker Node in Kubernetes
+
+A **worker node** is a virtual/physical server in a data center or a virtual machine running in the cloud where containers are deployed. The worker node is the machine where the actual user applications run inside the **pods**.
+
+## Worker Node Components
+
+Below is a breakdown of the key components of the worker node:
+
+### 1. Kubelet
+
+The **Kubelet** is the primary node agent that runs on each worker node in the cluster. Its primary responsibility is to look at the spec submitted to the API server on the Kubernetes master and ensure that containers defined in the submitted spec file are running inside pods and healthy. If the Kubelet notices any issues while running pods, it tries to restart the pod on the same node.
+
+If the issue is with the worker node itself, the Kubernetes master detects it and selects another suitable worker node in the cluster to run the pods.
+
+### 2. Kube-proxy
+
+**Kube-proxy** is a network proxy that runs on each node in the cluster. It is responsible for managing network connectivity, maintaining network rules across all nodes, pods, and containers inside the cluster, and also exposing services to the outside world. Kube-proxy is the core network component for the entire Kubernetes cluster.
+
+### 3. Container Runtime
+
+The **container runtime** is the software application that runs inside every worker node and is responsible for running containers. Kubernetes supports various container runtimes such as Docker, containerd, CRI-O, etc.
+
+### 4. Pods
+
+A **pod** is one of the most used terms in Kubernetes (k8s). It is the smallest unit of a k8s cluster that wraps the containers. Each pod consists of one or more containers. In most cases, one pod runs one container. Sometimes, there are more than one dependent containers running together inside a single pod, where one container helps the other container complete the job.
+
+The simple relationship between a worker node, pod, and container is as follows:
+- Inside a worker node, there is at least one pod.
+- Inside a pod, there is at least one container.
+
 
 ## K8s Clusture Represntaion: 
 - https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
