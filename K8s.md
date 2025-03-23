@@ -62,14 +62,14 @@ In simple terms, Kubernetes makes it easier to run and manage apps at scale, ens
 - A way to expose an application running in a set of pods to the outside world or other parts of the cluster. It helps in load balancing and stable network communication.
 
 ## 10. Master Node & it's Components
-:
+
 - The control plane of Kubernetes, responsible for managing the cluster and making decisions about scheduling and scaling.
 - It has several important components:
   - **API Server**: Acts as the main entry point to interact with the Kubernetes cluster. It handles all requests and updates to the cluster.
     
-  - **Scheduler**: The scheduler is responsible for scheduling pods based on the configuration file. In the configuration file, you can define the number of CPU, memory, and 
-    other configurations. Once we pass the configuration file to the API server, the scheduler selects the best worker node to run the pods, based on resource availability 
-    on the worker nodes.
+  - **Scheduler**: The scheduler is responsible for scheduling pods based on the configuration file. In the configuration file, you can define the number of CPU, memory, 
+    and other configurations. Once we pass the configuration file to the API server, the scheduler selects the best worker node to run the pods, based on resource 
+    availability on the worker nodes.
 
     For example, let’s say your cluster has two worker nodes: one with CPU utilization of 60% and another with CPU utilization of 30%. The scheduler will select the worker 
     node with 30% CPU utilization to run the newly created pod.
@@ -118,6 +118,3 @@ The simple relationship between a worker node, pod, and container is as follows:
 ## K8s Clusture Represntaion: 
 - https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
 - https://kubernetes.io/docs/concepts/architecture/
-
-- https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
-
