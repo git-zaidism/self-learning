@@ -65,9 +65,24 @@ In simple terms, Kubernetes makes it easier to run and manage apps at scale, ens
 - The control plane of Kubernetes, responsible for managing the cluster and making decisions about scheduling and scaling.
 - It has several important components:
   - **API Server**: Acts as the main entry point to interact with the Kubernetes cluster. It handles all requests and updates to the cluster.
-  - **Scheduler**: Decides where to place containers (called pods) based on resources and other factors.
-  - **Controller Manager**: Ensures that the cluster’s desired state is maintained (e.g., ensuring a certain number of pods are running).
-  - **etcd**: Ensures that the cluster’s desired state is maintained (e.g., ensuring a certain number of pods are running).
+    
+  - **Scheduler**: The scheduler is responsible for scheduling pods based on the configuration file. In the configuration file, you can define the number of CPU, memory, and 
+    other configurations. Once we pass the configuration file to the API server, the scheduler selects the best worker node to run the pods, based on resource availability 
+    on the worker nodes.
+
+    For example, let’s say your cluster has two worker nodes: one with CPU utilization of 60% and another with CPU utilization of 30%. The scheduler will select the worker 
+    node with 30% CPU utilization to run the newly created pod.
+
+  - **Controller Manager**: The Controller Manager is responsible for the overall health of the entire cluster. It ensures that worker nodes are up and running and that the 
+    correct number of pods are running. It detects changes in the cluster state and attempts to restore it as soon as possible.
+
+    For example, if a pod dies, it will detect the state change by reading the information stored in etcd and create a new pod as soon as possible.
+    
+  - **etcd**: etcd is the central distributed database, it stores the cluster information in key-value store such as its current state, desired state, configuration of 
+    resources, and runtime data, often referred to as the cluster’s brain. Kubernetes interacts with etcd through its API server. It is the single source of truth for 
+    cluster information at any given point of time
+
+
 
 ## K8s Clusture Represntaion: 
 - https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
