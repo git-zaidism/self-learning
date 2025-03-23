@@ -118,3 +118,8 @@ The simple relationship between a worker node, pod, and container is as follows:
 ## K8s Clusture Represntaion: 
 - https://www.prakashbhandari.com.np/posts/understanding-the-basic-concepts-of-kubernetes-cluster/
 - https://kubernetes.io/docs/concepts/architecture/
+
+
+# Tutorial with Spring boot on K8s
+- https://medium.com/@javatechie/kubernetes-tutorial-setup-kubernetes-in-windows-run-spring-boot-application-on-k8s-cluster-c6cab8f7de5a
+
