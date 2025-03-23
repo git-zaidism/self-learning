@@ -61,7 +61,8 @@ In simple terms, Kubernetes makes it easier to run and manage apps at scale, ens
 ## 9. Services:
 - A way to expose an application running in a set of pods to the outside world or other parts of the cluster. It helps in load balancing and stable network communication.
 
-## 10. Master Node:
+## 10. Master Node & it's Components
+:
 - The control plane of Kubernetes, responsible for managing the cluster and making decisions about scheduling and scaling.
 - It has several important components:
   - **API Server**: Acts as the main entry point to interact with the Kubernetes cluster. It handles all requests and updates to the cluster.
